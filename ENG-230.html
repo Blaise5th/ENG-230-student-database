@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+  <style>
+      /* phone view */
+      @media (max-width: 600px) {
+          
+          header {
+              background-color: whitesmoke;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+             padding: 20px;                  
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 1000;
+              height: 15px;
+          }
+          
+          h1 {
+            font-size: 18px;
+            text-align: center;
+            position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+          } 
+          
+          .check-button {
+       font-size: 1px;
+       padding: 1px;
+       cursor: pointer;
+       transition: 0.25s;
+       width: 35px;
+       margin-top: 15px;
+     }
+     .check-button:active {
+       font-size: 1px;
+       padding: 1px;
+       cursor: pointer;
+       background-color: white;
+     }
+      
+      ::placeholder {
+        font-size: 8px;
+      }
+      
+      input {
+        font-size: 8px;
+      }
+      
+      .input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      font-size: 8px;
+      margin-top: 70px;
+          }
+          
+          table {
+          font-size: 5px;
+          margin-top: 13px;
+          }
+      
+       .add-button:active {
+       font-size: 8px;
+            background-color: #748ae8;
+            border-radius: 3px;
+            opacity: 0.5;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 2px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        
+        .add-button {
+        border-radius: 3px;
+            background-color: #748ae8;
+            border: solid;
+            border-color: #748ae8;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 2px 1px 2px 1px;
+            cursor: pointer;
+            width: 30px;
+            font-size: 6px;
+         }
+         
+     .remove-button:active {
+     font-size: 8px;
+            background-color: #dcd937;
+            opacity: 0.45;
+            border: none;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 2px;
+            transition: 0.25s;
+        }
+        .remove-button {
+        font-size: 8px;
+            background-color: #79771e;
+            border: none;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 2px;
+       }
+       
+       .js-mat-number-input {
+         margin: 6px 0px;
+       }
+       .input-group-1 {
+        display: flex;
+        flex-direction: column; 
+       }
+       .input-group-2 {
+        display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: start;
+         width: 132px;
+       }
+      }
+      
+      /* ipad view */
+      @media (min-width: 601px) and (max-width: 999px) {
+ 
+     .check-button {
+       font-size: 18px;
+       padding: 6px;
+       cursor: pointer;
+       transition: 0.25s;
+     }
+     .check-button:hover {
+       font-size: 19px;
+       padding: 6px;
+       cursor: pointer;
+       background-color: white;
+     }
+     h1 {
+       font-size: 30px;
+     }
+     
+      body {
+      display: flex;
+      justify-content: center;
+      }
+           .input-container {
+           display: flex;
+           flex-direction: row;
+           align-items: start;
+           grid-template-columns: 1fr 1fr;
+          grid-column-gap: 8px;
+          margin-top: 120px;
+          }
+          table {
+          display: grid;
+          grid-template-columns: 1fr;
+          margin-top: 10px;
+          }
+          .input-group-2 {
+          height: 3px;
+            margin-top: 1.4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: start;
+          }
+     .js-date-input {
+       width: 100px;
+       height: 17.87px;
+     }
+          header {
+              background-color: whitesmoke;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 1000;
+          }
+          .add-button:hover {
+            background-color: #748ae8;
+            border-radius: 3px;
+            opacity: 0.5;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 1px 6px 1px 6px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .add-button {
+            border-radius: 3px;
+            background-color: #748ae8;
+            border: solid;
+            border-color: #748ae8;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 1px 6px 5px 6px;
+            cursor: pointer;
+            height: 23px;
+            width: 60px;
+            font-size: 12px;
+            margin-left: 10px;
+         }
+         
+         .remove-button:active {
+     background-color: #dcd937;
+            opacity: 0.45;
+            border: none;
+            color: whitesmoke;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+        .remove-button {
+        font-size: 15px;
+            background-color: #79771e;
+            border: none;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 2px;
+        }
+    tr {
+      display: grid;
+      grid-template-columns: 45px 1fr 115px 100px 70.5px;
+    }   
+         }
+         
+          /*  code for laptop view */
+ 
+       @media (min-width: 1000px) {
+       tr {
+      display: grid;
+      grid-template-columns: 45px 1fr 115px 100px 70.5px;
+    }   
+           .check-button {
+       font-size: 18px;
+       padding: 6px;
+       cursor: pointer;
+       transition: 0.25s;
+     }
+     .check-button:hover {
+       font-size: 19px;
+       padding: 6px;
+       cursor: pointer;
+       background-color: white;
+     }
+     h1 {
+       font-size: 30px;
+     }
+     
+      body {
+      display: flex;
+      justify-content: center;
+      }
+           .input-container {
+           display: flex;
+           flex-direction: row;
+           align-items: start;
+           grid-template-columns: 1fr 1fr;
+          grid-column-gap: 8px;
+          margin-top: 120px;
+          }
+          table {
+          display: grid;
+          grid-template-columns: 1fr;
+          margin-top: 10px;
+          }
+          .input-group-2 {
+          height: 3px;
+            margin-top: 1.4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: start;
+          }
+     .js-date-input {
+       width: 100px;
+       height: 17.87px;
+     }
+          header {
+              background-color: whitesmoke;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              align-items: center;
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 1000;
+          }
+          .add-button:hover {
+            background-color: #748ae8;
+            border-radius: 3px;
+            opacity: 0.5;
+            border: none;
+            color: white;
+            font-weight: bold;
+            padding: 1px 6px 5px 6px;
+            transition: 0.25s;
+            cursor: pointer;
+        }
+        .add-button {
+            border-radius: 3px;
+            background-color: #748ae8;
+            border: solid;
+            border-color: #748ae8;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 1px 6px 5px 6px;
+            cursor: pointer;
+            height: 23px;
+            width: 60px;
+            font-size: 12px;
+            margin-left: 10px;
+         }
+         
+         .remove-button:active {
+     background-color: #dcd937;
+            opacity: 0.45;
+            border: none;
+            color: whitesmoke;
+            font-weight: bold;
+            transition: 0.25s;
+        }
+        .remove-button {
+        font-size: 15px;
+            background-color: #79771e;
+            border: none;
+            color: whitesmoke;
+            font-weight: bold;
+            padding: 2px;
+            border-radius: 2px;
+        }
+      }
+      
+   /* default code for every device */
+   input {
+             border: solid 1px black;
+         }
+         
+         button {
+             cursor: pointer;
+         }
+         span {
+           color: blue;
+         }
+         </style>
+</head>
+<body>
+    
+   <header>
+    <h1>
+        ENG 230 STUDENT DATABASE
+    </h1>
+    <button 
+    class="check-button"
+    onclick="check()">
+       Check 
+    </button>
+   </header>
+   
+ <div class="container">
+    <div class="input-container">
+      <div class="input-group-1">
+    <input 
+    type="text" 
+    placeholder="Student Name"
+    class="js-name-input"
+    >
+    <input 
+    type="text"
+    placeholder="Mat Number"
+    class="js-mat-number-input"
+    >
+     </div>
+     <div class="input-group-2">
+    <input 
+    type="date"
+    class="js-date-input"
+    >
+       <button 
+      class="add-button"
+      onclick="addInfo()">
+        Add
+       </button>
+     </div>
+    </div>
+   <table 
+    class="student-info-table"
+    border="1">
+    <tbody class="js-student-info"></tbody>
+    </table>
+ </div>   
+<script src="js/ENG230.js"></script>
+</body>
+  </html>
